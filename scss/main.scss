@@ -1,8 +1,12 @@
 @import "normalize";
-@import "defaults";
 
-h1 {
-	color: red;
+
+@import "foundation/_settings";
+
+@import "foundation";
+
+.tester {
+	color: $primary-color;
 }
 
 h2 {

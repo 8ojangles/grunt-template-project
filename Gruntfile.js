@@ -14,7 +14,13 @@ module.exports = function (grunt) {
 
         // Task configuration.
         sass: {
+            options: {
+                includePaths: ['scss/foundation/scss']
+            },
             dist: {
+                options: {
+                    outputStyle: 'compressed'
+                },
                 files: {
                     'css/main.css': 'scss/main.scss'
                 }
@@ -97,7 +103,8 @@ module.exports = function (grunt) {
           // END old set up
 
             sass: {
-                files: ['scss/*.scss'],
+                files: ['scss/**/*.scss'],
+
                 tasks: ['sass', 'autoprefixer'],
                 options: {
                     spawn: false,
@@ -141,6 +148,6 @@ module.exports = function (grunt) {
 
     // Default task.
     // grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-    grunt.registerTask('default', ['connect', 'watch', 'autoprefixer', 'sass']);
+    grunt.registerTask('default', ['connect', 'sass', 'autoprefixer', 'watch']);
 
 };
