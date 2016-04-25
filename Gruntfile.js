@@ -13,27 +13,55 @@ module.exports = function (grunt) {
                 ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
 
         // Task configuration.
+        includes: {
+            files: {
+                src: ['source/html_templates/pages/*.html'], // Source files
+                dest: 'dist', // Destination directory
+                flatten: true,
+                cwd: '.',
+
+                options: {
+                    filenameSuffix: '.html',
+                    silent: true,
+                    debug: false
+                    // banner: '<!-- I am a banner <% includes.files.dest %> -->'
+                }
+            }
+        },
+
         sass: {
             options: {
-                includePaths: ['scss/foundation/scss']
+                includePaths: ['source/scss/foundation/scss']
             },
             dist: {
                 options: {
                     outputStyle: 'compressed'
                 },
                 files: {
-                    'css/main.css': 'scss/main.scss'
+                    'dist/css/main.css': 'source/scss/main.scss'
                 }
             }
         },
 
-        autoprefixer: {
-            // prefix all the files
-            multiple_files: {
-                expand: true,
-                flatten: true,
-                src: '*.css',
-                dest: 'css/'
+        // autoprefixer: {
+        //     // prefix all the files
+        //     multiple_files: {
+        //         expand: true,
+        //         flatten: true,
+        //         src: '*.css',
+        //         dest: 'css/'
+        //     }
+        // },
+
+        postcss: {
+            options: {
+                map: true,
+                processors: [
+                    require('autoprefixer')({browsers: ['last 3 versions']})
+                ]
+            },
+            dist: {
+                src: 'dist/css/*.css'
             }
         },
 
@@ -103,9 +131,9 @@ module.exports = function (grunt) {
           // END old set up
 
             sass: {
-                files: ['scss/**/*.scss'],
+                files: ['source/scss/**/*.scss'],
 
-                tasks: ['sass', 'autoprefixer'],
+                tasks: ['sass', 'postcss'],
                 options: {
                     spawn: false,
                     livereload: true
@@ -113,7 +141,8 @@ module.exports = function (grunt) {
             },
 
             html: {
-                files: ['*.html'],
+                files: ['dist/*.html', 'source/html_templates/**/*.html'],
+                tasks: ['includes'],
                 options: {
                     spawn: false,
                     livereload: true
@@ -126,7 +155,7 @@ module.exports = function (grunt) {
             server: {
                 options: {
                     port: 9000,
-                    base: '.',
+                    base: 'dist',
                     hostname: '0.0.0.0',
                     protocol: 'http',
                     // livereload: true,
@@ -143,11 +172,12 @@ module.exports = function (grunt) {
     // grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-postcss');
     grunt.loadNpmTasks('grunt-sass');
+    grunt.loadNpmTasks('grunt-includes');
 
     // Default task.
     // grunt.registerTask('default', ['jshint', 'qunit', 'concat', 'uglify']);
-    grunt.registerTask('default', ['connect', 'sass', 'autoprefixer', 'watch']);
+    grunt.registerTask('default', ['connect', 'includes', 'sass', 'postcss', 'watch']);
 
 };
