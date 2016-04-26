@@ -1,0 +1,120 @@
+@font-face {
+    font-family: 'neuzeit_groteskregular';
+    src: url('../assets/fonts/NeuzeitGro/regular/neuzeitgro-reg.eot');
+    src: url('../assets/fonts/NeuzeitGro/regular/neuzeitgro-reg.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/NeuzeitGro/regular/neuzeitgro-reg.woff2') format('woff2'),
+         url('../assets/fonts/NeuzeitGro/regular/neuzeitgro-reg.woff') format('woff'),
+         url('../assets/fonts/NeuzeitGro/regular/neuzeitgro-reg.ttf') format('truetype'),
+         url('../assets/fonts/NeuzeitGro/regular/neuzeitgro-reg.svg#neuzeit_groteskregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$brand-font-regular: 'neuzeit_groteskregular';
+
+
+@font-face {
+    font-family: 'neuzeit_groteskbold';
+    src: url('../assets/fonts/NeuzeitGro/bold/neuzeitgro-bol.eot');
+    src: url('../assets/fonts/NeuzeitGro/bold/neuzeitgro-bol.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/NeuzeitGro/bold/neuzeitgro-bol.woff2') format('woff2'),
+         url('../assets/fonts/NeuzeitGro/bold/neuzeitgro-bol.woff') format('woff'),
+         url('../assets/fonts/NeuzeitGro/bold/neuzeitgro-bol.ttf') format('truetype'),
+         url('../assets/fonts/NeuzeitGro/bold/neuzeitgro-bol.svg#neuzeit_groteskbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$brand-font-bold: 'neuzeit_groteskbold';
+
+
+@font-face {
+    font-family: 'neuzeit_groteskblack';
+    src: url('../assets/fonts/NeuzeitGro/black/neuzeitgro-bla.eot');
+    src: url('../assets/fonts/NeuzeitGro/black/neuzeitgro-bla.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/NeuzeitGro/black/neuzeitgro-bla.woff2') format('woff2'),
+         url('../assets/fonts/NeuzeitGro/black/neuzeitgro-bla.woff') format('woff'),
+         url('../assets/fonts/NeuzeitGro/black/neuzeitgro-bla.ttf') format('truetype'),
+         url('../assets/fonts/NeuzeitGro/black/neuzeitgro-bla.svg#neuzeit_groteskblack') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$brand-font-heavy: 'neuzeit_groteskblack';
+
+
+
+@font-face {
+    font-family: 'neuzeit_grotesklight';
+    src: url('../assets/fonts/NeuzeitGro/light/neuzeitgro-lig.eot');
+    src: url('../assets/fonts/NeuzeitGro/light/neuzeitgro-lig.eot?#iefix') format('embedded-opentype'),
+         url('../assets/fonts/NeuzeitGro/light/neuzeitgro-lig.woff2') format('woff2'),
+         url('../assets/fonts/NeuzeitGro/light/neuzeitgro-lig.woff') format('woff'),
+         url('../assets/fonts/NeuzeitGro/light/neuzeitgro-lig.ttf') format('truetype'),
+         url('../assets/fonts/NeuzeitGro/light/neuzeitgro-lig.svg#neuzeit_grotesklight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$brand-font-light: 'neuzeit_grotesklight';
+
+// set heading font family
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $brand-font-light, arial;
+}
+
+// set font sizes
+
+h1 {
+    font-family: $brand-font-bold, arial;
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 27px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 22px;
+}
+
+/*
+
+h5 {
+    font-size: 24px;
+}
+
+h6 {
+    font-size: 22px;
+}
+
+*/
+
+// default paragraph text styles
+p {
+    font-family: $brand-font-regular;
+    font-size: 16px;
+
+    @media only screen and (min-width: 64.063em) { 
+        font-size: 18px;
+    }
+}
+
+// small text used for disclaimers and navigation hints
+small {
+    font-size: 14px;
+}
+
+blockquote {
+    font-size: 30px;
+}
+

@@ -1,14 +1,11 @@
 @import "normalize";
 
-
 @import "foundation/_settings";
 
 @import "foundation";
 
-.tester {
-	color: $primary-color;
-}
+@import "functions-mixins";
 
-h2 {
-	color: green;
-}
+@import "variables";
+
+@import "fonts";

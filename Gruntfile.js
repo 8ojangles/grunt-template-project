@@ -21,6 +21,8 @@ module.exports = function (grunt) {
                 cwd: '.',
 
                 options: {
+                    includeRegexp: /^(\s*)\&\&include\&\&\s+"(\S+)"\s*$/,
+                    includePath: 'source/html_templates',
                     filenameSuffix: '.html',
                     silent: true,
                     debug: false
@@ -42,16 +44,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
-        // autoprefixer: {
-        //     // prefix all the files
-        //     multiple_files: {
-        //         expand: true,
-        //         flatten: true,
-        //         src: '*.css',
-        //         dest: 'css/'
-        //     }
-        // },
 
         postcss: {
             options: {
