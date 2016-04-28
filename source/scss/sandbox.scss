@@ -1,0 +1,123 @@
+// sandbox variables
+
+$top-bar-height: 54px;
+$top-title-bar-height: 50px;
+
+// dev only classes
+
+.dev-bg-grey20pc {
+	background-color: rgba(0,0,0,0.2);
+}
+
+.dev-bg-grey40pc {
+	background-color: rgba(0,0,0,0.4);
+}
+
+.dev-bg-white80pc {
+	background-color: rgba(255,255,255,0.8);
+}
+// END dev only classes
+
+
+// site main top bar
+
+.site-top-bar {
+	width: 100%;
+	height: $top-bar-height;
+	padding: 7px 20px;
+}
+
+// site main top bar items and specific items
+
+.site-top-bar-item {
+	width: 40px;
+	height: 40px;
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+
+.logo-small {
+	background-image: url(../assets/img/logomini_edit.png);
+}
+
+.hamburger-small {
+	background-image: url(../assets/img/icon_hamburger_menu.png);
+	background-size: 80%;
+	background-position: center;
+	margin-left: 40px;
+}
+
+.account-small {
+	background-image: url(../assets/img/icon_account.png);
+	background-size: 80%;
+	background-position: center;
+}
+
+.arrow-down-small {
+	background-image: url(../assets/img/icon_arrow_down.png);
+	background-size: 80%;
+	background-position: center;
+}
+
+.page-top-title-bar {
+	width: 100%;
+	height: $top-title-bar-height;
+	padding: 6px 20px;
+}
+
+.site-module-product-hero {
+	position: relative;
+	min-height: 400px;
+	width: 100%;
+}
+
+.site-module-product-hero-title-container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding-bottom: 2em;
+}
+
+.bg-leaves {
+	background-image: url(../assets/img/dew_drop_flower_bud.png);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.top-spacer {
+	padding-top: 2em;
+}
+
+// text links
+
+.text-icon-link {
+
+	display: block;
+	height: 30px;
+	width: 100%;
+	text-align: left;
+	padding-left: 50px;
+	position: relative;
+
+	span {
+		display: block;
+		height: 30px;
+	}
+
+	.play-icon {
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: url(../assets/img/play.png);
+		width: 30px;
+		background-size: 30px;
+		background-repeat: no-repeat;
+	}
+
+	.text {
+		&.blue {
+			color: $blue3;
+		}
+	}
+}

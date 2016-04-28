@@ -73,6 +73,10 @@ h1,h2,h3,h4,h5,h6 {
 h1 {
     font-family: $brand-font-bold, arial;
     font-size: 36px;
+
+    @media only screen and (min-width: 64.063em) { 
+        font-size: 50px;
+    }
 }
 
 h2 {
@@ -99,13 +103,35 @@ h6 {
 
 */
 
+// heading modifiers
+
+h1,h2,h3,h4,h5,h6 {
+    &.white {
+        color: $white;
+    }
+    &.grey25 {
+        color: $grey25
+    }
+}
+
+
 // default paragraph text styles
-p {
+p,
+.text-icon-link .text {
     font-family: $brand-font-regular;
     font-size: 16px;
 
     @media only screen and (min-width: 64.063em) { 
         font-size: 18px;
+    }
+
+}
+
+.introPara {
+    font-size: 22px;
+
+    @media only screen and (min-width: 64.063em) { 
+        font-size: 28px;
     }
 }
 
