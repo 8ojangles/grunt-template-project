@@ -1,7 +1,38 @@
-// sandbox variables
+// sandbox
+
+
+/* ********** UTILITIES ********** */
+
+// img url
+$assetPath : "../assets/img/";
+
+/* 
+
+use: url(#{$assetPath}/my-image.png
+
+*/
 
 $top-bar-height: 54px;
 $top-title-bar-height: 50px;
+
+
+.top-spacer {
+	padding-top: 2em;
+}
+
+.centered-block-content {
+	text-align: center;
+
+	& > {
+		display: inline-block;
+	}
+}
+
+.squeeze20 {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 
 // dev only classes
 
@@ -18,7 +49,15 @@ $top-title-bar-height: 50px;
 }
 // END dev only classes
 
+// bg-colors
 
+.bg-grey15 {
+	background-color: $grey15;
+}
+
+.bg-grey3 {
+	background-color: $grey3;
+} 
 // site main top bar
 
 .site-top-bar {
@@ -37,24 +76,24 @@ $top-title-bar-height: 50px;
 }
 
 .logo-small {
-	background-image: url(../assets/img/logomini_edit.png);
+	background-image: url(#{$assetPath}logomini_edit.png);
 }
 
 .hamburger-small {
-	background-image: url(../assets/img/icon_hamburger_menu.png);
+	background-image: url(#{$assetPath}icon_hamburger_menu.png);
 	background-size: 80%;
 	background-position: center;
 	margin-left: 40px;
 }
 
 .account-small {
-	background-image: url(../assets/img/icon_account.png);
+	background-image: url(#{$assetPath}icon_account.png);
 	background-size: 80%;
 	background-position: center;
 }
 
 .arrow-down-small {
-	background-image: url(../assets/img/icon_arrow_down.png);
+	background-image: url(#{$assetPath}icon_arrow_down.png);
 	background-size: 80%;
 	background-position: center;
 }
@@ -80,13 +119,9 @@ $top-title-bar-height: 50px;
 }
 
 .bg-leaves {
-	background-image: url(../assets/img/dew_drop_flower_bud.png);
+	background-image: url(#{$assetPath}dew_drop_flower_bud.png);
 	background-size: cover;
 	background-position: bottom;
-}
-
-.top-spacer {
-	padding-top: 2em;
 }
 
 // text links
@@ -109,7 +144,7 @@ $top-title-bar-height: 50px;
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-image: url(../assets/img/play.png);
+		background-image: url(#{$assetPath}play.png);
 		width: 30px;
 		background-size: 30px;
 		background-repeat: no-repeat;
@@ -119,5 +154,64 @@ $top-title-bar-height: 50px;
 		&.blue {
 			color: $blue3;
 		}
+	}
+}
+
+.text-link {
+
+	&.centered {
+		display: block;
+		margin: 0 auto;
+	}
+
+	&.blue {
+		color: $blue3;
+	}
+}
+
+.divider {
+	display: block;
+	width: 100%;
+	height:2px;
+	margin: 0.5em auto 0 auto;
+
+	&.small {
+		max-width: 70px;
+
+	}
+
+	&.light {
+		background-color: $grey15;
+	}
+
+	&.dark {
+		background-color: $grey60;
+	}
+}
+
+.small-disclaimer-text {
+	margin-bottom: 3em;
+}
+
+.site-module-product-feature-list {
+	padding-bottom: 2em;
+}
+
+.product-features-item {
+	padding: 20px;
+}
+
+.list-ticked {
+
+	margin: 0;
+	padding: 0 0 2em 0;
+	list-style-type: none;
+	
+	li {
+		padding: 0 0 1em 30px;
+		background-image: url(#{$assetPath}tick.png);
+		background-repeat: no-repeat;
+		background-size: 20px;
+		background-position: 0 3px;
 	}
 }
