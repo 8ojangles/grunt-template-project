@@ -50,6 +50,13 @@ $top-title-bar-height: 50px;
 // END dev only classes
 
 // bg-colors
+.bg-grey60 {
+	background-color: $grey60;
+}
+
+.bg-grey25 {
+	background-color: $grey25;
+} 
 
 .bg-grey15 {
 	background-color: $grey15;
@@ -184,6 +191,10 @@ $top-title-bar-height: 50px;
 		background-color: $grey15;
 	}
 
+	&.midShade {
+		background-color: $grey25;
+	}
+
 	&.dark {
 		background-color: $grey60;
 	}
@@ -215,3 +226,45 @@ $top-title-bar-height: 50px;
 		background-position: 0 3px;
 	}
 }
+
+// site Footer
+
+.footer {
+	padding: 3em 0 4em 0;
+}
+
+.footer-breadcrumb {
+	color: $grey60;
+
+	a {
+		color: $grey60;
+	}
+}
+
+
+.site-footer-list {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	width: 98%;
+}
+
+.list-item {
+	color: $grey60;
+}
+
+.list-title {
+	width: 100%;
+	color: $grey60;
+	font-family: $brand-font-bold;
+}
+
+.long-list {
+	margin-left: 1%;
+}
+
+.long-list .list-item {
+	width: 50%;
+	float: left;
+}
+
