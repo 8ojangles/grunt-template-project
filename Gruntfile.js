@@ -132,6 +132,15 @@ module.exports = function (grunt) {
                 }
             },
 
+            scripts: {
+                files: ['dist/js/*.js'],
+                // tasks: ['jshint'],
+                options: {
+                  spawn: false,
+                  livereload: true
+                },
+              },
+
             html: {
                 files: ['dist/*.html', 'source/html_templates/**/*.html'],
                 tasks: ['includes'],
@@ -140,6 +149,8 @@ module.exports = function (grunt) {
                     livereload: true
                 }
             }
+
+
 
         },
 

@@ -20,6 +20,14 @@ $top-title-bar-height: 50px;
 	padding-top: 2em;
 }
 
+.top-spacer-large {
+	padding-top: 4em;
+}
+
+.bottom-spacer {
+	padding-bottom: 2em;
+}
+
 .centered-block-content {
 	text-align: center;
 
@@ -64,7 +72,28 @@ $top-title-bar-height: 50px;
 
 .bg-grey3 {
 	background-color: $grey3;
-} 
+}
+
+.bg-white {
+	background-color: $white;
+}
+
+// bg images
+
+.bg-misty-bridge {
+	background-image: url(#{$assetPath}mist_bridge_1024.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.bg-relax-feet {
+	background-image: url(#{$assetPath}casual_relaxing_shoes_full.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
 // site main top bar
 
 .site-top-bar {
@@ -86,6 +115,9 @@ $top-title-bar-height: 50px;
 	background-image: url(#{$assetPath}logomini_edit.png);
 }
 
+
+// image icons
+
 .hamburger-small {
 	background-image: url(#{$assetPath}icon_hamburger_menu.png);
 	background-size: 80%;
@@ -104,6 +136,36 @@ $top-title-bar-height: 50px;
 	background-size: 80%;
 	background-position: center;
 }
+
+.book-small {
+	background-image: url(#{$assetPath}icon-book.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.ledger-small {
+	background-image: url(#{$assetPath}icon-ledger.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.clock-small {
+	background-image: url(#{$assetPath}icon-clock.png);
+	background-size: 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.graph-small {
+	background-image: url(#{$assetPath}graph.png);
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+
 
 .page-top-title-bar {
 	width: 100%;
@@ -130,6 +192,30 @@ $top-title-bar-height: 50px;
 	background-size: cover;
 	background-position: bottom;
 }
+
+// investment advice module icons
+
+.invest-advice-icon {
+	width: 50px;
+	height: 50px;
+	margin: 2em auto;
+	opacity: 0.4;
+}
+
+.text-link-blue {
+		color: $blue3;
+}
+
+
+.small-disclaimer-text {
+	color: $grey60;
+
+	.italics {
+		font-style: italic;
+	}
+}
+
+
 
 // text links
 
@@ -212,6 +298,18 @@ $top-title-bar-height: 50px;
 	padding: 20px;
 }
 
+
+// investment tools component
+
+.tools-invest {
+
+	.illustration {
+		margin: 2em auto;
+		width: 200px;
+		height: 100px;
+	}
+}
+
 .list-ticked {
 
 	margin: 0;
@@ -238,6 +336,10 @@ $top-title-bar-height: 50px;
 
 	a {
 		color: $grey60;
+
+		&:hover {
+			color: $grey85;
+		}
 	}
 }
 
@@ -249,13 +351,19 @@ $top-title-bar-height: 50px;
 	width: 98%;
 }
 
-.list-item {
+.list-item a {
 	color: $grey60;
+
+	&:hover {
+		color: $grey85;
+	}
+
 }
 
 .list-title {
 	width: 100%;
 	color: $grey60;
+	font-size: 1.05em;
 	font-family: $brand-font-bold;
 }
 

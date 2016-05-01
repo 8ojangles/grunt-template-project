@@ -6,6 +6,10 @@
 
 @import "functions-mixins";
 
+@import "slick-carousel/slick";
+
+@import "slick-carousel/slick-theme";
+
 @import "variables";
 
 @import "fonts";
@@ -13,3 +17,5 @@
 @import "custom";
 
 @import "sandbox";
+
+@import "carousel-slider";

@@ -91,11 +91,18 @@ h4 {
     font-size: 22px;
 }
 
+h5 {
+    font-size: 18px;
+
+    &.theme-tag {
+        letter-spacing: 2px;
+        font-family: $brand-font-bold;
+    }
+}
+
 /*
 
-h5 {
-    font-size: 24px;
-}
+
 
 h6 {
     font-size: 22px;
@@ -112,6 +119,11 @@ h1,h2,h3,h4,h5,h6 {
     &.grey25 {
         color: $grey25
     }
+
+    &.grey60 {
+        color: $grey60;
+    }
+
 }
 
 
