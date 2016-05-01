@@ -1,5 +1,98 @@
 // tools carousel slider
 
+// responsive settings:
+// display 4 tools in grid per page at large breakpoint
+
+@media #{$medium-up} {
+
+	// .slick-track > div > div {
+
+	// 	&:first-of-type {
+	// 		.slide-container {
+	// 			&:first-of-type {
+	// 				padding: 0 5px 5px 0;
+	// 			}
+	// 			&:last-of-type {
+	// 				padding: 0 0 5px 5px;
+	// 			}
+	// 		}
+	// 	}
+
+	// 	&:last-of-type {
+	// 		.slide-container {
+	// 			&:first-of-type {
+	// 				padding: 5px 5px 0 0;
+	// 			}
+	// 			&:last-of-type {
+	// 				padding: 5px 0 0 5px;
+	// 			}
+	// 		}
+	// 	}
+
+	// }
+
+} // close Medium-up breakpoint
+
+.slide-container {
+	padding: 5px;
+}
+
+
+$carousel-control-base-size: 60px;
+
+.slider-controls {
+	width: ($carousel-control-base-size*2)+10px;
+	height: $carousel-control-base-size;
+	float: right;
+}
+
+.custom-carousel-control,
+.custom-carousel-control:focus {
+	width: $carousel-control-base-size;
+	height: $carousel-control-base-size;
+	padding: 0;
+	background-color: $white;
+	font-family: $brand-font-light;
+	font-size: $carousel-control-base-size*0.75;
+	text-align: center;
+	line-height: $carousel-control-base-size;
+	color: $grey60;
+	border: 1px solid $white;
+	outline: none;
+
+	&:first-of-type {
+		margin-right: 5px;
+	}
+
+	&:hover {
+		background-color: $grey15;
+	}
+
+	&.slick-disabled {
+		color: $white;
+		background: none;
+
+		&:hover {
+			background: none;
+			cursor: default;
+		}
+	}
+}
+
+
+.slick-dots {
+    bottom: -70px;
+    margin: 0;
+
+    li {
+    	margin: 0 10px;
+
+    	button:before {
+    		font-size: 15px;
+    	}
+    }
+}
+
 .slide-panel {
 	padding: 20px;
 	box-shadow: 0 0 10px rgba(0,0,0,0.25)

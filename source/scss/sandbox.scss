@@ -28,6 +28,14 @@ $top-title-bar-height: 50px;
 	padding-bottom: 2em;
 }
 
+.bottom-spacer-large {
+	padding-bottom: 4em;
+}
+
+.eq-spacer {
+	margin: 1em 0;
+}
+
 .centered-block-content {
 	text-align: center;
 
@@ -91,6 +99,40 @@ $top-title-bar-height: 50px;
 	background-image: url(#{$assetPath}casual_relaxing_shoes_full.png);
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.bg-relax-feet-faded {
+	position: relative;
+	z-index: 1;
+	&:before {
+		content: ' ';
+	    display: block;
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 100%;
+	    height: 100%;
+	    z-index: -1;
+	    opacity: 0.2;
+		background-image: url(#{$assetPath}casual_relaxing_shoes_full.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+}
+
+.bg-hand-clock {
+	background-image: url(#{$assetPath}hand_clock.jpg);
+	background-size: cover;
+	background-position: bottom;
+	background-repeat: no-repeat;
+}
+
+.bg-party-tables{
+	background-image: url(#{$assetPath}party_tables_1024.jpg);
+	background-size: cover;
+	background-position: bottom;
 	background-repeat: no-repeat;
 }
 
@@ -160,7 +202,7 @@ $top-title-bar-height: 50px;
 
 .graph-small {
 	background-image: url(#{$assetPath}graph.png);
-	background-size: 100% auto;
+	background-size: auto 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -267,10 +309,18 @@ $top-title-bar-height: 50px;
 	width: 100%;
 	height:2px;
 	margin: 0.5em auto 0 auto;
+	border: none;
+
+	&.eq-spaced {
+		margin: 1em auto;
+	}
+
+	&.thin {
+		height: 1px;
+	}
 
 	&.small {
 		max-width: 70px;
-
 	}
 
 	&.light {
