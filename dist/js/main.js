@@ -10,35 +10,30 @@ $(document).ready(function(){
 		nextArrow: '.carousel-next',
 		infinite: false,
 		speed: 300,
-		rows: 2,
-		slidesPerRow: 2
+		rows: 1,
+		slidesPerRow: 1,
+		responsive: [
+			{
+				breakpoint: 4000,
+				settings: {
+			    	centerMode: false,
+				    rows: 2,
+					slidesPerRow: 2
+			    }
+			},
+			{
+				breakpoint: 740,
+				settings: {
+					arrows: false,
+					dots: false,
+					swipeToSlide: true,
+			    	centerMode: true,
+				    slidesToShow: 1,
+				    rows: 1
+			    }
+			}
 
-		// responsive: [
-		//   {
-		//     breakpoint: 1024,
-		//     settings: {
-		//     	slidesToShow: 2,
-		//     	rows: 2,
-		//     	slidesPerRow: 2
-		//     }
-		//   },
-		//   {
-		//     breakpoint: 600,
-		//     settings: {
-		//       slidesToShow: 1,
-		//     	rows: 1,
-		//     	slidesPerRow: 2
-		//     }
-		//   },
-		//   {
-		//     breakpoint: 480,
-		//     settings: {
-		//       slidesToShow: 1,
-		//     	rows: 1,
-		//     	slidesPerRow: 1
-		//     }
-		//   }
-		// ]
+		]
 
 	});
 

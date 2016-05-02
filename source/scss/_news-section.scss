@@ -3,6 +3,11 @@
 	box-shadow: 0 0 7px rgba(0,0,0,0.5);
 	overflow: hidden;
 	margin-right: 20px;
+
+	@media #{$small-only} { 
+		margin-bottom: 2em;
+		margin-right: 0;
+	}
 }
 
 .article-image {
@@ -21,7 +26,12 @@
 
 .news-article-item {
 	margin-bottom: 20px;
-	width: 80%;
+	padding: 0 20px;
+	@media #{$medium-up} { 
+		width: 80%;
+		padding: 0;
+	}
+
 }
 
 .article-details,

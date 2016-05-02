@@ -79,6 +79,9 @@ $carousel-control-base-size: 60px;
 	}
 }
 
+.slick-slide:focus {
+	outline: none;
+}
 
 .slick-dots {
     bottom: -70px;
