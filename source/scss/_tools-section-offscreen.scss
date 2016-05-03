@@ -1,0 +1,213 @@
+.tools-section-offscreen-container {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	top: 100%;
+	opacity: 0;
+	overflow-y: scroll;
+	margin-right: -20px;
+	transform: scale(0.5,0.5);
+	transition: all 0.5s ease-in;
+
+	&.active {
+		top: 0;
+		opacity: 1;
+		transform: scale(1,1);
+		transition: all 0.5s ease-out;
+	}
+
+	.inner-container {
+		width: 100%;
+		max-height: 3000px;
+		margin-right: -20px;
+		
+	}
+
+}
+
+
+.tools-section-title-bar {
+	&.bottom-border {
+		border-bottom: 2px solid $grey15;
+	}
+}
+
+.tools-section-tool-select {
+	&.bottom-border {
+		border-bottom: 1px solid $blue3;
+	}
+}
+
+.tools-section-tool-option {
+	&.bottom-border {
+		border-bottom: 2px solid $grey15;
+	}
+}
+
+.tools-section-intro {
+
+	.illustration {
+		width: 300px;
+		height: 150px;
+		margin: 3em auto;
+	}
+}
+
+.button {
+	&.skeleton {
+		border-radius: 3px;
+		width: 42%;
+		background-color: $white;
+		border: 1px solid $grey15;
+		padding: 1.5rem 2rem;
+		box-shadow: 0 0 5px rgba(0,0,0,0.2);
+		color: $grey60;
+
+		&:hover,
+		&.active {
+			border: 1px solid $blue3;
+			box-shadow: none;
+
+			.tri {
+				display: block;
+				width: 0;
+				height: 0;
+				position: absolute;
+				bottom: -16px;
+				left: 50%;
+				margin-left: -4px;
+				border-top: 8px solid $blue3;
+				border-right: 8px solid transparent;
+				border-bottom: 8px solid transparent;
+				border-left: 8px solid transparent;
+
+				&:after {
+					content: ' ';
+					display: block;
+					width: 0;
+					height: 0;
+					position: absolute;
+					bottom: -7px;
+					left: 50%;
+					margin-left: -8px;
+					border-top: 8px solid $white;
+					border-right: 8px solid transparent;
+					border-bottom: 8px solid transparent;
+					border-left: 8px solid transparent;
+				}
+			}
+
+		}
+
+	}
+}
+
+.linked-tri-container {
+	position: relative;
+}
+
+.linked-tri {
+	display: block;
+	width: 0;
+	height: 0;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -4px;
+	border-top: 8px solid transparent;
+	border-right: 8px solid transparent;
+	border-bottom: 8px solid $blue3;
+	border-left: 8px solid transparent;
+
+	&.left-active {
+		left: 22.75%;
+	}
+
+	&.right-active {
+		left: 77%;
+	}
+
+	&:after {
+		content: ' ';
+		display: block;
+		width: 0;
+		height: 0;
+		position: absolute;
+		bottom: -9px;
+		left: 50%;
+		margin-left: -8px;
+		border-top: 8px solid transparent;
+		border-right: 8px solid transparent;
+		border-bottom: 8px solid $white;
+		border-left: 8px solid transparent;
+	}
+}
+
+.close-button {
+	float: right;
+	font-size: 40px;
+	color: $grey60;
+}
+
+// range slider controls overrides
+
+.range-slider-active-segment {
+	background-color: $blue3;
+}
+
+.range-slider.round .range-slider-handle {
+	width: 2rem;
+	height: 2rem;
+	top: -0.5rem;
+	background-color: $blue3;
+	box-shadow: 0 0 3px rgba(0,0,0,1);
+
+	&:hover {
+		background-color: $blue1;
+	}
+}
+
+.range-min-value-label,
+.range-max-value-label {
+	font-size: 16px;
+	font-family: $brand-font-light;
+	color: $grey60;
+	position: absolute;
+	bottom: -40px;
+}
+
+.range-min-value-label {
+	left: 0;
+}
+
+.range-max-value-label {
+	right: 0;
+}
+
+.range-display {
+	.range-output {
+		font-size: 32px;
+		color: $grey60;
+		font-family: $brand-font-light;
+	}
+
+	span {
+		font-size: 54px;
+		color: $blue3;
+		position: relative;
+		top: 6px;
+		display: inline-block;
+		margin: 0 7px;
+	}
+}
+
+.js-calculate {
+	margin: 0 auto;
+	font-family: $brand-font-regular;
+	background-color: $blue3;
+
+	&:hover {
+		background-color: $blue1;
+	}
+}

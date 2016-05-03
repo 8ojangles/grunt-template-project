@@ -54,6 +54,20 @@ $top-title-bar-height: 50px;
 	padding-right: 20px;
 }
 
+// vertically centered content
+.vertical-centered-content {
+	position: relative;
+	display: table;
+
+	& > * {
+		display: table-cell; 
+  		vertical-align: middle; 
+  		text-align: center;
+	}
+
+}
+
+
 // buttons
 
 .button {
@@ -381,6 +395,14 @@ $top-title-bar-height: 50px;
 		height: 100px;
 	}
 }
+
+.tool-title {
+	width: 100%;
+	height: 75px;
+}
+
+
+// ticked list items
 
 .list-ticked {
 

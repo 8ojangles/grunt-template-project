@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-	/* SLICK carousel */
+	/* SLICK carousel init options */
 
 	$('.slider-container').slick({
 
@@ -28,6 +28,7 @@ $(document).ready(function(){
 					dots: false,
 					swipeToSlide: true,
 			    	centerMode: true,
+			    	centerPadding: '20px',
 				    slidesToShow: 1,
 				    rows: 1
 			    }
@@ -35,6 +36,36 @@ $(document).ready(function(){
 
 		]
 
-	});
+	}); /* CLOSE: SLICK carousel init options */
+
+
+/* TOOLS offscreen page functions */
+
+$('.js-tool-trigger').click(function(){
+
+	$('.tools-section-offscreen-container').addClass('active');
 
 });
+
+$('.js-close-tools').click(function(){
+
+	$('.tools-section-offscreen-container').removeClass('active');
+
+});
+
+
+/* TOOLS range slider */
+
+$('.invest-amount').on('change.fndtn.slider', function(){
+ 	var thisVal = $('.invest-amount').attr('data-slider');
+ 	$('.invest-amount-display .js-range-amount').html(thisVal);
+});
+
+$('.invest-period').on('change.fndtn.slider', function(){
+ 	var thisVal = $('.invest-period').attr('data-slider');
+ 	$('.invest-period-display .js-range-amount').html(thisVal);
+});
+
+
+
+}); /* CLOSE: doc ready*/
