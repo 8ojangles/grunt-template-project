@@ -123,6 +123,38 @@ $primary-color: #ff0000;
 // $warning-color: #f08a24;
 // $info-color: #a0d3e8;
 
+
+/************ Color scheme ************/
+/* Added Simon.P (not vanilla foundation) */
+/* monochrome shades */
+
+$white: #ffffff;
+$grey3: #f7f7f7;
+$grey15: #d9d9d9;
+$grey25: #bfbfbf;
+$grey60: #666666;
+$grey85: #262626;
+
+/* CTA */
+
+$orange1: #f26730;
+$orange2: #e57725;
+$orange3: #ff8d31;
+$blue1: #006193;
+$blue2: #016FAD;
+$blue3: #00a6e0;
+$blue4: #eaf2f6;
+
+/* Messaging */
+
+$green1: #339900;
+$green2: #91cc9b;
+$red1: #cc3333;
+
+/************ Color scheme ************/
+
+
+
 // We use these to control various global styles
 // $body-bg: $white;
 // $body-font-color: $jet;
@@ -220,20 +252,20 @@ $primary-color: #ff0000;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
-// $h2-font-size: rem-calc(37);
-// $h3-font-size: rem-calc(27);
-// $h4-font-size: rem-calc(23);
-// $h5-font-size: rem-calc(18);
-// $h6-font-size: 1rem;
+$h1-font-size: rem-calc(50);
+$h2-font-size: rem-calc(27);
+$h3-font-size: rem-calc(24);
+$h4-font-size: rem-calc(20);
+$h5-font-size: rem-calc(18);
+$h6-font-size: rem-calc(12);
 
 // We use these to control header size reduction on small screens
-// $h1-font-reduction: rem-calc(10);
-// $h2-font-reduction: rem-calc(10);
-// $h3-font-reduction: rem-calc(5);
-// $h4-font-reduction: rem-calc(5);
-// $h5-font-reduction: 0;
-// $h6-font-reduction: 0;
+$h1-font-reduction: rem-calc(14);
+$h2-font-reduction: rem-calc(6);
+$h3-font-reduction: rem-calc(4);
+$h4-font-reduction: rem-calc(3);
+$h5-font-reduction: 0;
+$h6-font-reduction: 0;
 
 // These control how subheaders are styled.
 // $subheader-line-height: 1.4;
@@ -270,7 +302,9 @@ $primary-color: #ff0000;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
+$anchor-font-color: $blue3;
+$anchor-font-color-hover: $blue1;
+
 // $anchor-font-color-hover: scale-color($anchor-font-color, $lightness: -14%);
 
 // We use these to style the <hr> element

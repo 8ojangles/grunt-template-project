@@ -15,6 +15,11 @@ use: url(#{$assetPath}/my-image.png
 $top-bar-height: 54px;
 $top-title-bar-height: 50px;
 
+// toolkit dev demo styles
+
+.toolkit .panel {
+	margin: 2em 0 1em 0;
+}
 
 .top-spacer {
 	padding-top: 2em;
@@ -67,15 +72,54 @@ $top-title-bar-height: 50px;
 
 }
 
+// Styles modifying vanilla Foundation styling
+
+@media #{$large-up} { 
+
+.text-link {
+	transition: all 0.2s ease;
+	
+	:hover {
+		transition: all 5s ease;
+	}
+}
+
+
+}
+
+
+// END: Styles modifying vanilla Foundation styling
+
 
 // buttons
+
+.standard-button {
+	@include button(
+	$padding: 0,
+    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
+    $bg: $orange1,
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+    $radius: 3px
+  );
+
+	// custom attr.
+	font-family: $brand-font-regular;
+	width: 158px;
+	height: 34px;
+	line-height: 34px;
+
+	@media #{$medium-up} { 
+		font-size: rem-calc(18);
+	}
+
+}
+
 
 .button {
 	&.orange {
 		background-color: $orange1;
 	}
 }
-
 // dev only classes
 
 .dev-bg-grey20pc {
@@ -92,6 +136,10 @@ $top-title-bar-height: 50px;
 // END dev only classes
 
 // bg-colors
+.bg-grey85 {
+	background-color: $grey85;
+}
+
 .bg-grey60 {
 	background-color: $grey60;
 }
@@ -247,6 +295,14 @@ $top-title-bar-height: 50px;
 	width: 100%;
 }
 
+.hero-height {
+	height: 400px;
+}
+.hero-text {
+	width: 100%;
+	height: 400px;
+}
+
 .site-module-product-hero-title-container {
 	position: absolute;
 	bottom: 0;
@@ -261,15 +317,22 @@ $top-title-bar-height: 50px;
 	background-position: bottom;
 }
 
+.bg-mountain-view {
+	background-image: url(#{$assetPath}mountain_view.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
 // investment advice module icons
 
 .invest-advice-icon {
-	width: 50px;
+	width: 50px; 
 	height: 50px;
 	margin: 2em auto;
 	opacity: 0.4;
 }
 
+// replace with text-link
 .text-link-blue {
 		color: $blue3;
 }
@@ -283,6 +346,18 @@ $top-title-bar-height: 50px;
 	}
 }
 
+.text-link-icon {
+	display: inline-block;
+	padding-right: 30px;
+
+	background-size: 20px;
+	background-repeat: no-repeat;
+	background-position: right center;
+
+	&.play {
+		background-image: url(#{$assetPath}play.png);
+	}
+}
 
 
 // text links

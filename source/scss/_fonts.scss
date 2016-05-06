@@ -72,30 +72,34 @@ h1,h2,h3,h4,h5,h6 {
 
 h1 {
     font-family: $brand-font-bold, arial;
-    font-size: 36px;
 
-    @media only screen and (min-width: 64.063em) { 
-        font-size: 50px;
-    }
 }
 
+
 h2 {
-    font-size: 27px;
+
 }
 
 h3 {
-    font-size: 24px;
+
 }
 
 h4 {
-    font-size: 22px;
+
 }
 
 h5 {
-    font-size: 18px;
-
     &.theme-tag {
-        letter-spacing: 2px;
+        letter-spacing: 3px;
+        font-family: $brand-font-bold;
+    }
+}
+
+h6 {
+    &.theme-tag {
+        color: $grey25;
+        text-transform: uppercase;
+        letter-spacing: 3px;
         font-family: $brand-font-bold;
     }
 }
@@ -113,11 +117,15 @@ h6 {
 // heading modifiers
 
 h1,h2,h3,h4,h5,h6 {
+    // default header color
+    color: $grey85;
+
+    // header color modifier 
     &.white {
         color: $white;
     }
     &.grey25 {
-        color: $grey25
+        color: $grey25;
     }
 
     &.grey60 {
@@ -130,6 +138,8 @@ h1,h2,h3,h4,h5,h6 {
 // default paragraph text styles
 p,
 .text-icon-link .text {
+
+    color: $grey85;
     font-family: $brand-font-regular;
     font-size: 16px;
 
@@ -140,7 +150,9 @@ p,
 }
 
 .introPara {
+    color: $grey85;
     font-size: 22px;
+    font-family: $brand-font-light;
 
     @media only screen and (min-width: 64.063em) { 
         font-size: 28px;
@@ -149,10 +161,18 @@ p,
 
 // small text used for disclaimers and navigation hints
 small {
+    color: $grey60;
     font-size: 14px;
+    font-family: arial;
+
+    @media only screen and (min-width: 64.063em) { 
+        font-size: 16px;
+    }
 }
 
 blockquote {
     font-size: 30px;
 }
+
+
 
