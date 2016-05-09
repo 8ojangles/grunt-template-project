@@ -120,7 +120,62 @@ $top-title-bar-height: 50px;
 		background-color: $orange1;
 	}
 }
+
+
 // dev only classes
+
+.js-show-dimentions {
+	width: 200px;
+	height: 50px;
+	color: red;
+	background: white;
+	position: fixed;
+	z-index: 1000;
+	right: 30px;
+	top: 30px;
+
+	&.on {
+		color: white;
+		background: red;
+	}
+}
+
+.js-dev-element {
+	position: relative;
+
+	margin-top: 1em;
+	margin-bottom: 1em;
+
+	.js-dev-display {
+		background-color: rgba(0,0,255,0.3);
+		border-color: rgba(0,255,0,0.3);
+		opacity: 0;
+		position: absolute;
+		display:block;
+		z-index: 1;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+		transition: all 0.2s ease;
+	}
+}
+
+.display-dev-overlay {
+	.js-dev-element {
+		.js-dev-display{
+			opacity: 0.2;
+			transition: all 0.2s ease;
+		}
+		&:hover {
+			.js-dev-display{
+				opacity: 0.5;
+				transition: all 0.2s ease;
+			}
+		}
+	
+	}	
+}
+
 
 .dev-bg-grey20pc {
 	background-color: rgba(0,0,0,0.2);
